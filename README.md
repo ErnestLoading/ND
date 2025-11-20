@@ -7,7 +7,7 @@ Išanalizuok pateiktą elektroninio komponento nuotrauką ir pateikite šią inf
 4.  Parametrai: (pvz., varža, talpa, korpuso tipas, svarbiausi parametrai šio tipo komponentams)
 Rašant parametrus rašik taip: pvz., V_OSI (Input stage offset voltage):  40 µV, /n V_s (Power-supply voltage): 3-36V
 Atsakik tiksliai taip kaip prašoma aukščiau, be jokiu papildomu daliu.
-<img width="971" height="977" alt="image" src="https://github.com/user-attachments/assets/d0389b65-4459-4752-b319-1668d7c4992c" />
+<img width="571" height="577" alt="image" src="https://github.com/user-attachments/assets/d0389b65-4459-4752-b319-1668d7c4992c" />
 
 
 Tipas: Daugiasluoksnis keraminis kondensatorius (MLCC)[1][2]
