@@ -21,7 +21,7 @@ Dielektriko tipas (Dielectric Material): pvz., X7R, C0G (NP0), Y5V.[10] X7R tipo
 Tolerancija (Tolerance): nurodo leistiną talpos nuokrypį nuo nominalios vertės, pvz., ±5%, ±10%, ±20%[5]
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Išanalizuok pateiktą elektroninio komponento nuotrauką ir pateikite šią informaciją:
 1.  Tipas: (pvz., rezistorius, kondensatorius, operacinis stiprintuvas, instumencinis stiprintuvas)
@@ -45,7 +45,7 @@ DT (Deadtime): Programuojamas (reguliuojamas)
 
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
