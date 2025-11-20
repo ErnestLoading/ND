@@ -7,7 +7,7 @@ Išanalizuok pateiktą elektroninio komponento nuotrauką ir pateikite šią inf
 4.  Parametrai: (pvz., varža, talpa, korpuso tipas, svarbiausi parametrai šio tipo komponentams)
 Rašant parametrus rašik taip: pvz., V_OSI (Input stage offset voltage):  40 µV, /n V_s (Power-supply voltage): 3-36V
 Atsakik tiksliai taip kaip prašoma aukščiau, be jokiu papildomu daliu.
-<img width="571" height="577" alt="image" src="https://github.com/user-attachments/assets/d0389b65-4459-4752-b319-1668d7c4992c" />
+<img width="471" height="477" alt="image" src="https://github.com/user-attachments/assets/d0389b65-4459-4752-b319-1668d7c4992c" />
 
 
 Tipas: Daugiasluoksnis keraminis kondensatorius (MLCC)[1][2]
@@ -30,7 +30,7 @@ Išanalizuok pateiktą elektroninio komponento nuotrauką ir pateikite šią inf
 4.  Parametrai: (pvz., varža, talpa, korpuso tipas, svarbiausi parametrai šio tipo komponentams)
 Rašant parametrus rašik taip: pvz., V_OSI (Input stage offset voltage):  40 µV, /n V_s (Power-supply voltage): 3-36V
 Atsakik tiksliai taip kaip prašoma aukščiau, be jokiu papildomu daliu.
-<img width="974" height="967" alt="image" src="https://github.com/user-attachments/assets/90554538-0112-409d-8108-99d8a2868ef9" />
+<img width="474" height="467" alt="image" src="https://github.com/user-attachments/assets/90554538-0112-409d-8108-99d8a2868ef9" />
 
 Tipas: D klasės garso stiprintuvo valdiklis (Class D [1][2]Audio Amplifier Driver).
 Modelis: IRS2092S.
@@ -57,7 +57,7 @@ Išanalizuok pateiktą elektroninio komponento nuotrauką ir pateikite šią inf
 4.  Parametrai: (pvz., varža, talpa, korpuso tipas, svarbiausi parametrai šio tipo komponentams)
 Rašant parametrus rašik taip: pvz., V_OSI (Input stage offset voltage):  40 µV, /n V_s (Power-supply voltage): 3-36V
 Atsakik tiksliai taip kaip prašoma aukščiau, be jokiu papildomu daliu.
-<img width="979" height="974" alt="image" src="https://github.com/user-attachments/assets/cd83d1c8-35b3-49cf-a73f-854bb777f53b" />
+<img width="479" height="474" alt="image" src="https://github.com/user-attachments/assets/cd83d1c8-35b3-49cf-a73f-854bb777f53b" />
 
 Tipas: Integruotas D klasės garso stiprintuvas.
 Mo[1][2]delis: MA5332MS.
