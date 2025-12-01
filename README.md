@@ -1,52 +1,48 @@
 # ND
 ```mermaid
-graph TD;
-@startuml
-!theme plain
-autonumber
+sequenceDiagram
+    autonumber
+    actor User as Vartotojas
+    participant UI as Jupyter UI<br>(Widgets)
+    participant App as Python Skriptas<br>(Logic)
+    participant AI as Google Gemini<br>(API)
+    participant Search as Google Search<br>(API)
 
-actor "Vartotojas" as User
-participant "Jupyter UI\n(Widgets)" as UI
-participant "Python Skriptas\n(Logic)" as App
-participant "Google Gemini\n(API)" as AI
-participant "Google Search\n(API)" as Search
+    Note over User, Search: 1. Failo Įkėlimas
+    User->>UI: Įkelia nuotrauką
+    UI->>App: validate_file()
+    alt Failas netinkamas
+        App->>UI: Rodyti klaidą
+    else Failas tinkamas
+        App->>UI: Rodyti nuotrauką
+    end
 
-== 1. Failo Įkėlimas ==
-User -> UI: Įkelia nuotrauką
-UI -> App: validate_file()
-alt Failas netinkamas
-    App -> UI: Rodyti klaidą
-else Failas tinkamas
-    App -> UI: Rodyti nuotrauką
-end
+    Note over User, Search: 2. Analizės Pradžia
+    User->>UI: Spaudžia "Analizuoti"
+    UI->>App: on_analyze()
+    activate App
 
-== 2. Analizės Pradžia ==
-User -> UI: Spaudžia "Analizuoti"
-UI -> App: on_analyze()
-activate App
+    Note over User, Search: 3. Identifikavimas (Gemini)
+    App->>AI: generate_content(Nuotrauka)<br>"Nuskaityk modelį"
+    activate AI
+    AI-->>App: Grąžina: "Modelio Pavadinimas"
+    deactivate AI
 
-== 3. Identifikavimas (Gemini) ==
-App -> AI: generate_content(Nuotrauka)\n"Nuskaityk modelį"
-activate AI
-AI --> App: Grąžina: "Modelio Pavadinimas"
-deactivate AI
+    Note over User, Search: 4. Informacijos Paieška (Google)
+    App->>Search: GET customsearch<br>(Modelis + "datasheet filetype:pdf")
+    activate Search
+    Search-->>App: Grąžina: Tekstines santraukas (Snippets)
+    deactivate Search
 
-== 4. Informacijos Paieška (Google) ==
-App -> Search: GET customsearch\n(Modelis + "datasheet filetype:pdf")
-activate Search
-Search --> App: Grąžina: Tekstines santraukas (Snippets)
-deactivate Search
+    Note over User, Search: 5. Galutinė Analizė (Gemini)
+    App->>AI: generate_content(Nuotrauka + Santraukos)<br>"Aprašyk komponentą pagal šią info"
+    activate AI
+    AI-->>App: Grąžina: Suformuotas techninis aprašymas
+    deactivate AI
 
-== 5. Galutinė Analizė (Gemini) ==
-App -> AI: generate_content(Nuotrauka + Santraukos)\n"Aprašyk komponentą pagal šią info"
-activate AI
-AI --> App: Grąžina: Suformuotas techninis aprašymas
-deactivate AI
-
-== 6. Rezultatas ==
-App -> UI: Atvaizduoti rezultatą (Markdown)
-deactivate App
-@enduml
+    Note over User, Search: 6. Rezultatas
+    App->>UI: Atvaizduoti rezultatą (Markdown)
+    deactivate App
 ```
 Išanalizuok pateiktą elektroninio komponento nuotrauką ir pateikite šią informaciją:
 1.  Tipas: (pvz., rezistorius, kondensatorius, operacinis stiprintuvas, instumencinis stiprintuvas)
