@@ -56,7 +56,9 @@ flowchart TD
     
     %% "Taip" atvejas
     Check -- Taip --> Show[Rodyti paveikslėlį ekrane]
-    Show --> Button[Vartotojas spaudžia "Analizuoti"]
+    
+    %% Pakeistos kabutės žemiau esančioje eilutėje
+    Show --> Button[Vartotojas spaudžia 'Analizuoti']
 
     %% 1 Žingsnis
     subgraph Step1 [1 Žingsnis: Identifikavimas]
