@@ -44,6 +44,48 @@ sequenceDiagram
     App->>UI: Atvaizduoti rezultatą (Markdown)
     deactivate App
 ```
+```mermaid
+flowchart TD
+    Start((Pradžia)) --> Input[Vartotojas įkelia failą]
+    
+    Input --> Check{Ar failas yra<br>paveikslėlis?}
+    
+    %% "Ne" atvejas
+    Check -- Ne --> Error[Rodyti klaidą]
+    Error --> Stop((Pabaiga))
+    
+    %% "Taip" atvejas
+    Check -- Taip --> Show[Rodyti paveikslėlį ekrane]
+    Show --> Button[Vartotojas spaudžia "Analizuoti"]
+
+    %% 1 Žingsnis
+    subgraph Step1 [1 Žingsnis: Identifikavimas]
+        direction TB
+        SendGemini[Siųsti nuotrauką į Gemini] --> GetName[Gauti komponento pavadinimą]
+    end
+    
+    Button --> SendGemini
+
+    %% 2 Žingsnis
+    subgraph Step2 [2 Žingsnis: Paieška]
+        direction TB
+        SendGoogle[Siųsti pavadinimą į Google Search API] --> GetSnippets[Gauti teksto santraukas / Snippets]
+    end
+
+    GetName --> SendGoogle
+
+    %% 3 Žingsnis
+    subgraph Step3 [3 Žingsnis: Generavimas]
+        direction TB
+        SendFinal[Siųsti Nuotrauką + Santraukas į Gemini] --> GenDesc[Sugeneruoti galutinį aprašymą]
+    end
+
+    GetSnippets --> SendFinal
+
+    %% Pabaiga
+    GenDesc --> Result[Išvesti rezultatą į ekraną]
+    Result --> Stop
+```
 Išanalizuok pateiktą elektroninio komponento nuotrauką ir pateikite šią informaciją:
 1.  Tipas: (pvz., rezistorius, kondensatorius, operacinis stiprintuvas, instumencinis stiprintuvas)
 2.  Modelis: (pvz., INA826AIDR)
