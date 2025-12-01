@@ -1,5 +1,11 @@
 # ND
-
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 Išanalizuok pateiktą elektroninio komponento nuotrauką ir pateikite šią informaciją:
 1.  Tipas: (pvz., rezistorius, kondensatorius, operacinis stiprintuvas, instumencinis stiprintuvas)
 2.  Modelis: (pvz., INA826AIDR)
