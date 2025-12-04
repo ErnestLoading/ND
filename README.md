@@ -1,4 +1,4 @@
-# ND
+# Elektroninių Komponentų Analizės Sistema
 ```mermaid
 sequenceDiagram
     autonumber
